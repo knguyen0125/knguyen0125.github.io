@@ -27,7 +27,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://knguyen0125.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 author: Kien Nguyen
 github_username:  knguyen0125
-markdown: GFM
+markdown: kramdown
 
 # Build settings
 plugins:
