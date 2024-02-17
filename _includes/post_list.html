@@ -1,9 +1,11 @@
 {% if site.pagination.enabled %} {% assign posts = paginator.posts %} {% else %}
 {% assign posts = site.posts %} {% endif %} {%- if posts.size > 0 -%} {%- if
 page.list_title -%}
-<h2 class="post-list-heading text-4xl">{{ page.list_title }}</h2>
+<h2 class="post-list-heading text-4xl font-light">{{ page.list_title }}</h2>
 {%- elsif page.autopages %}
-<h2 class="post-list-heading text-4xl">{{ page.autopages.display_name }}</h2>
+<h2 class="post-list-heading text-4xl font-light">
+  {{ page.autopages.display_name }}
+</h2>
 {%- endif -%}
 <div class="post-list mt-8 flex flex-col gap-16">
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
