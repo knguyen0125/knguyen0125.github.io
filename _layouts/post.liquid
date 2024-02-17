@@ -6,7 +6,7 @@ layout: base
   <header class="flex flex-col">
     <time
       class="relative z-10 order-first mb-3 flex items-center pl-3.5 text-sm text-zinc-400 dark:text-zinc-500"
-      datetime="{{ page.date |  date: '%Y-%m-%d' }}"
+      datetime="{{ page.date | date: '%Y-%m-%d' }}"
     >
       <span class="absolute inset-y-0 left-0 flex items-center">
         <span
@@ -21,7 +21,7 @@ layout: base
       {{ page.title }}
     </h1>
     {% if page.tags.size > 0 %}
-    <div class="mt-4 flex items-center space-x-2 text-sm text-gray-700">
+      <div class="mt-4 flex items-center space-x-2 text-sm text-gray-700">
       <span class="text-zinc-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,16 +36,17 @@ layout: base
           />
         </svg>
       </span>
-      {% for tag in page.tags %} {% assign tag_id = tag %} {% assign
-      matching_tag = site.data.tags[tag_id] %} {% assign tag_name =
-      matching_tag["name"] | default:tag_id %}
-      <a
-        class="text-zinc-500 hover:text-blue-600 hover:underline"
-        href="{{ site.baseurl }}/tags/{{ tag }}"
-        >{{ tag_name }}</a
-      >
-      {% endfor %}
-    </div>
+        {% for tag in page.tags %}
+          {% assign tag_id = tag %}
+          {% assign matching_tag = site.data.tags[tag_id] %}
+          {% assign tag_name = matching_tag["name"] | default: tag_id %}
+          <a
+            class="text-zinc-500 hover:text-blue-600 hover:underline"
+            href="{{ site.baseurl }}/tags/{{ tag }}"
+          >{{ tag_name }}</a
+          >
+        {% endfor %}
+      </div>
     {% endif %}
   </header>
   <div class="prose mt-8">{{ page.content }}</div>
