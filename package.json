@@ -15,5 +15,8 @@
     "@shopify/prettier-plugin-liquid": "^1.4.3",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11"
+  },
+  "scripts": {
+    "start": "bundle exec jekyll serve --livereload --drafts"
   }
 }
