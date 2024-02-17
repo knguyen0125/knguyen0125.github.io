@@ -1,0 +1,14 @@
+<div>
+  <div class="mb-2 text-2xl">Tags ({{ site.tags.size }})</div>
+  <ul class="list-inside list-disc">
+    {% for tag in site.tags %}
+    <li>
+      <a
+        class="text-zinc-700 hover:text-blue-600 hover:underline"
+        href="{{ site.baseurl }}/tags/{{ tag[0] }}"
+        >{{ tag[0] }} ({{ tag[1].size }})</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</div>

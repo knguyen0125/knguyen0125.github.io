@@ -18,10 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Kien's Personal Blogs
+title: Kien's Blogs
 email: k.nguyen0125@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Quick description here...
+  This is my personal blog where I write about my thoughts, experiences, and things I've learned.
+  I hope you find something useful here.
 domain: knguyen0125.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://knguyen0125.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -86,3 +87,7 @@ autopages:
     slugify:
       mode: 'default'
       case: false
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
