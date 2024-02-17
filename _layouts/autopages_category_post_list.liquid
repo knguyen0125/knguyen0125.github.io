@@ -1,5 +1,8 @@
 ---
 layout: base
+pagination:
+  sort_field: "part"
+  sort_reverse: false
 ---
 
 {{ content }}
@@ -8,7 +11,7 @@ layout: base
   <div class="md:col-span-2">
     {%- if page.autopages %}
       {% assign tag_id = page.autopages.display_name %}
-      {% assign matching_tag = site.data.tags[tag_id] %}
+      {% assign matching_tag = site.data.categories[tag_id] %}
       {% assign tag_name = matching_tag["name"] | default:tag_id %}
       <h2 class="post-list-heading text-4xl font-light">
         {{ tag_name }}

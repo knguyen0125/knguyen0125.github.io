@@ -87,6 +87,15 @@ autopages:
     slugify:
       mode: 'default'
       case: false
+  categories:
+    layouts:
+      - 'autopages_category_post_list.liquid'
+    title: 'Posts in category :cat'
+    permalink: '/categories/:cat'
+    silent: false
+    slugify:
+      mode: 'default'
+      case: false
 
 kramdown:
   input: GFM

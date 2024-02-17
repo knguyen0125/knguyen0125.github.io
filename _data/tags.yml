@@ -5,3 +5,7 @@ uncategorized:
 architecture:
   name: Architecture
   description: Posts about software architecture.
+
+microservices:
+  name: Microservices
+  description: Posts about microservices.
