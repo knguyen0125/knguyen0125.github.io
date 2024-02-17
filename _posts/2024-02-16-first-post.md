@@ -18,3 +18,9 @@ This is my first blog post. I'm testing out ...
 def hello_world():
     print("Hello world")
 ```
+
+### Testing tables
+
+| Name  | Age |
+|-------|-----|
+| Alice | 20  |
