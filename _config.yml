@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Kien Nguyen's Personal Blogs
+title: Kien's Personal Blogs
 email: k.nguyen0125@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Quick description here...
@@ -35,6 +35,7 @@ plugins:
   - jekyll-relative-links
   - jekyll-optional-front-matter
   - jekyll-sitemap
+  - jemoji
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -58,3 +59,30 @@ exclude:
 
 postcss:
   cache: false
+
+#tag_page_layout: tag_page
+#tag_page_dir: tags
+#tag_page_data:
+#  pagination:
+#    enabled: true
+show_excerpts: true
+
+pagination:
+  enabled: true
+  debug: true
+  per_page: 2
+  sort_field: "date"
+  sort_reverse: true
+  permalink: '/pages/:num/'
+
+autopages:
+  enabled: true
+  tags:
+    layouts:
+      - 'autopage_tags.html'
+    title: 'Posts tagged with :tag'
+    permalink: '/tags/:tag'
+    silent: false
+    slugify:
+      mode: 'default'
+      case: false

@@ -4,3 +4,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fix for jemoji */
+.emoji {
+  display: inline;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+}
