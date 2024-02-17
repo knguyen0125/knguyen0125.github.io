@@ -1,16 +1,15 @@
 <div>
   <div class="mb-2 text-2xl">Series ({{ site.categories.size }})</div>
   <ul class="list-inside list-disc">
-    {% for tag in site.categories %}
-    {% assign tag_id = tag[0] %}
-    {% assign matching_tag = site.data.categories[tag_id] %}
-    {% assign tag_name = matching_tag["name"] | default:tag_id %}
+    {% for category in site.categories %}
+    {% assign category_id = category[0] %}
+    {% assign matching_category = site.data.categories[category_id] %}
+    {% assign category_name = matching_category["name"] | default:category_id %}
     <li>
       <a
         class="text-zinc-700 hover:text-blue-600 hover:underline"
-        href="{{ site.baseurl }}/categories/{{ tag[0] }}"
-        >{{ tag_name }} ({{ tag[1].size }})</a
-      >
+        href="{{ site.baseurl }}/categories/{{ category[0] }}"
+        >{{ category_name }} ({{ category[1].size }})</a>
     </li>
     {% endfor %}
   </ul>

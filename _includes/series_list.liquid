@@ -1,0 +1,21 @@
+{% if page.category %}
+  {% assign category_id = page.category %}
+  {% assign category_data = site.data.categories[category_id] %}
+  {% assign category_posts = site.categories[category_id] |  sort: "part" %}
+  <div class="bg-zinc-100 p-4 rounded-xl mt-4">
+    <p>This is part {{ page.part }} of the <a href="{{ site.baseurl }}/categories/{{ category_id }}" class="font-semibold text-blue-500 hover:text-blue-700 hover:underline">{{ category_data.name }}</a> series.</p>
+    <ol class="mt-4 flex gap-1 flex-col">
+      {% for category_post in category_posts %}
+        {% if category_post.url == page.url %}
+          <li>
+            <p class="font-bold text-blue-500">Part {{ category_post.part }} - {{ category_post.title }} (You're here!)</p>
+          </li>
+        {% else %}
+          <li>
+            <a class="text-blue-500 hover:text-blue-700 hover:underline" href="{{ category_post.url }}">Part {{ category_post.part }} - {{ category_post.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </div>
+{% endif %}

@@ -6,3 +6,5 @@ tags:
 category: learn-django
 part: 1
 ---
+
+Hello world

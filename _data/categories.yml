@@ -1,3 +1,4 @@
 learn-django:
   name: Learn Django
-  description: Posts about learning Django.
+  description: Document my journey learning Django.
+  status: in-progress
