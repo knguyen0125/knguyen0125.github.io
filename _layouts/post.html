@@ -36,11 +36,13 @@ layout: base
           />
         </svg>
       </span>
-      {% for tag in page.tags %}
+      {% for tag in page.tags %} {% assign tag_id = tag %} {% assign
+      matching_tag = site.data.tags[tag_id] %} {% assign tag_name =
+      matching_tag["name"] | default:tag_id %}
       <a
         class="text-zinc-500 hover:text-blue-600 hover:underline"
         href="{{ site.baseurl }}/tags/{{ tag }}"
-        >{{ tag }}</a
+        >{{ tag_name }}</a
       >
       {% endfor %}
     </div>

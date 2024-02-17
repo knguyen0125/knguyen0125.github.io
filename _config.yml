@@ -80,7 +80,7 @@ autopages:
   enabled: true
   tags:
     layouts:
-      - 'post_list.liquid'
+      - 'autopages_tag_post_list.liquid'
     title: 'Posts tagged with :tag'
     permalink: '/tags/:tag'
     silent: false
@@ -91,3 +91,14 @@ autopages:
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      layout: post
+      tags:
+        - uncategorized
+    posts:
+      layout: post
+      tags:
+        - uncategorized

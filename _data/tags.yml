@@ -1,0 +1,7 @@
+uncategorized:
+  name: Uncategorized
+  description: Posts that are not categorized.
+
+architecture:
+  name: Architecture
+  description: Posts about software architecture.

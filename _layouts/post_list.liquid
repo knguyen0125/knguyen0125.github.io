@@ -6,10 +6,13 @@ layout: base
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
   <div class="md:col-span-2">
+    {%- if page.list_title -%}
+      <h2 class="post-list-heading text-4xl font-light">{{ page.list_title }}</h2>
+    {%- endif -%}
     {% include post_list.html %}
   </div>
 
   <div class="col-span-1">
-    {% include tag_list.html %}
+    {% include tag_list.liquid %}
   </div>
 </div>

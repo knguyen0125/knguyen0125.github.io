@@ -1,0 +1,28 @@
+---
+layout: base
+---
+
+{{ content }}
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+  <div class="md:col-span-2">
+    {%- if page.autopages %}
+      {% assign tag_id = page.autopages.display_name %}
+      {% assign matching_tag = site.data.tags[tag_id] %}
+      {% assign tag_name = matching_tag["name"] | default:tag_id %}
+      <h2 class="post-list-heading text-4xl font-light">
+        {{ tag_name }}
+      </h2>
+      {% if matching_tag %}
+        <p class="text-zinc-600 mt-2 text-sm">
+          {{ matching_tag["description"] }}
+        </p>
+      {% endif %}
+    {%- endif -%}
+    {% include post_list.html %}
+  </div>
+
+  <div class="col-span-1">
+    {% include tag_list.liquid %}
+  </div>
+</div>
