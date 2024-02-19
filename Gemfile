@@ -24,6 +24,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick", "~> 1.8"
 
-gem "rogue", "~> 0.1.1"
-
 gem "jekyll-compose", "~> 0.12.0", group: [:jekyll_plugins]
+
+gem "rouge", "~> 4.2"
