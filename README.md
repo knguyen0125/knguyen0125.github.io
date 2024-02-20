@@ -8,6 +8,11 @@ sudo dnf install -y ruby ruby-devel openssl-devel redhat-rpm-config gcc-c++ @dev
 ```
 
 ### Install dependencies
+
+Install Jekyll & NPM dependencies
+
 ```bash
 bundle install
+
+npm install
 ```
