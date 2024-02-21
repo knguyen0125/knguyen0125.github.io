@@ -4,7 +4,6 @@ gem "jekyll", "~> 4.2"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-postcss", "~> 0.5"
   gem "jekyll-seo-tag", "~> 2.8"
   gem "jekyll-relative-links", "~> 0.7.0"
   gem "jekyll-optional-front-matter", "~> 0.3.2"

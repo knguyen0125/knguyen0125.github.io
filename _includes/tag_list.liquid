@@ -7,7 +7,6 @@
     {% assign tag_name = matching_tag["name"] | default:tag_id %}
     <li>
       <a
-        class="text-zinc-700 hover:text-blue-600 hover:underline"
         href="{{ site.baseurl }}/tags/{{ tag[0] }}"
         >{{ tag_name }} ({{ tag[1].size }})</a
       >
