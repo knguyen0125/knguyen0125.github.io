@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {%- seo -%}
-    <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}" />
     <link
       rel="stylesheet"
       href="{{ 'assets/css/syntax.css' | relative_url }}"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <div class="flex min-h-screen flex-col justify-between">
+    <div>
       {% include nav.liquid %}
 
-      <div class="flex flex-auto bg-zinc-50">
-        <main class="container mx-auto bg-white p-4 md:p-16">
-          {{ content }}
-        </main>
-      </div>
+      <main class="container py-4">
+        {{ content }}
+      </main>
 
       {% include footer.liquid %}
     </div>
+    <script src="{{ 'assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
   </body>
 </html>

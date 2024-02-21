@@ -1,0 +1,13 @@
+@import "bootstrap/scss/bootstrap";
+
+table {
+  @extend .table;
+  @extend .table-striped;
+}
+
+div.highlight {
+  @extend .rounded;
+  @extend .p-4;
+  @extend .mt-2;
+  @extend .mb-2;
+}
