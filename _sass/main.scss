@@ -11,3 +11,7 @@ div.highlight {
   @extend .mt-2;
   @extend .mb-2;
 }
+
+pre.highlight {
+  @extend .m-0;
+}
