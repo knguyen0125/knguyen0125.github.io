@@ -3,6 +3,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+!_sass/bootstrap/scss/vendor
 .idea
 *.iml
 node_modules
